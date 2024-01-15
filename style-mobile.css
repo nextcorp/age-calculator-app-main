@@ -1,47 +1,49 @@
-.submit-btn {
-    background-size: 40% 40%;
-    width: 64px;
-    height: 64px;
-}
-
-.entry {
-    display: flex;
-    gap: 1rem;
-    width: 100%;
-}
-
-.button {
-    display: flex;
-    justify-content: center;
-    margin-top: 4rem;
-    margin-bottom: 4rem;
-}
-
-.submit-btn {
-    top: -32px;
-}
-
-.main {
-    margin-inline: 1rem;
-    margin-top: 4rem;
-    padding-inline: 2rem;
-    padding-block: 2rem;
-}
-
-.field {
-    width: 100%;
-}
-
-.field label {
-    font-size: 0.8rem;
-}
-
-.field input {
-    padding-inline: 0.8rem;
-    padding-block: 0.5rem;
-    font-size: 1.25rem;
-}
-
-.view h1 {
-    font-size: 3rem;
+@media screen and (max-width: 850px) {
+    .submit-btn {
+        background-size: 40% 40%;
+        width: 64px;
+        height: 64px;
+    }
+    
+    .entry {
+        display: flex;
+        gap: 1rem;
+        width: 100%;
+    }
+    
+    .button {
+        display: flex;
+        justify-content: center;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+    }
+    
+    .submit-btn {
+        top: -32px;
+    }
+    
+    .main {
+        margin-inline: 1rem;
+        margin-top: 4rem;
+        padding-inline: 2rem;
+        padding-block: 2rem;
+    }
+    
+    .field {
+        width: 100%;
+    }
+    
+    .field label {
+        font-size: 0.8rem;
+    }
+    
+    .field input {
+        padding-inline: 0.8rem;
+        padding-block: 0.5rem;
+        font-size: 1.25rem;
+    }
+    
+    .view h1 {
+        font-size: 3rem;
+    }
 }
