@@ -12,12 +12,30 @@ body {
     font-family: "Poppins";
 }
 
+.date-view {
+    color: hsl(259, 100%, 65%);
+}
+
 .submit-btn {
     border: none;
     background: hsl(259, 100%, 65%) url("assets/images/icon-arrow.svg");
     background-position: center center;
     background-repeat: no-repeat;
-    width: 64px;
-    height: 64px;
     border-radius: 50%;
+}
+
+.field label {
+    color: hsl(0, 1%, 44%);
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+
+.field input {
+    font-size: 1.5rem;
+    border: 1px solid hsl(0, 0%, 86%);
+}
+
+.view h1 {
+    font-style: italic;
+    font-weight: 700;
 }
