@@ -1,0 +1,61 @@
+@media screen and (min-width: 851px) {
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    .main {
+        max-width: 850px;
+    }
+
+    .submit-btn {
+        background-size: 40% 40%;
+        width: 96px;
+        height: 96px;
+    }
+    
+    .entry {
+        display: flex;
+        gap: 1rem;
+        width: 100%;
+    }
+    
+    .button {
+        display: flex;
+        justify-content: center;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+    }
+    
+    .submit-btn {
+        top: -48px;
+        right: 0px;
+    }
+    
+    .main {
+        padding-inline: 3rem;
+        padding-block: 3rem;
+    }
+    
+    .field {
+        width: 100%;
+    }
+    
+    .field label {
+        font-size: 0.8rem;
+    }
+    
+    .field input {
+        padding-inline: 1.5rem;
+        padding-block: 0.8rem;
+        font-size: 2.5rem;
+    }
+    
+    .view h1 {
+        font-size: 6rem;
+        line-height: 1.1;
+        font-weight: 800;
+    }
+}
