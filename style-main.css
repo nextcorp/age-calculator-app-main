@@ -1,15 +1,10 @@
-@font-face {
-    font-family: "Poppins";
-    src: url("assets/fonts/Poppins-Bold.ttf"),
-    url("assets/fonts/Poppins-BoldItalic.ttf"),
-    url("assets/fonts/Poppins-ExtraBold.ttf"),
-    url("assets/fonts/Poppins-ExtraBoldItalic.ttf"),
-    url("assets/fonts/Poppins-Italic.ttf"),
-    url("assets/fonts/Poppins-Regular.ttf");
-}
-
 body {
     font-family: "Poppins";
+    /*background: hsl(0, 0%, 86%);*/
+}
+
+.main {
+    background: hsl(0, 0%, 94%);
 }
 
 .date-view {
@@ -44,5 +39,5 @@ body {
 
 .view h1 {
     font-style: italic;
-    font-weight: 700;
+    font-weight: 800;
 }

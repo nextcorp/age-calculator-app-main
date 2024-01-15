@@ -14,8 +14,7 @@
     justify-content: center;
 }
 
-.view {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.main {
+    margin-inline: 1rem;
+    margin-top: 4rem;
 }
