@@ -1,3 +1,4 @@
+/* TODO: make desktop layout as close to design as possible */
 @media screen and (min-width: 851px) {
     body {
         display: flex;
@@ -18,8 +19,8 @@
     
     .entry {
         display: flex;
-        gap: 1rem;
-        width: 100%;
+        gap: 2rem;
+
     }
     
     .button {
@@ -39,18 +40,14 @@
         padding-block: 3rem;
     }
     
-    .field {
-        width: 100%;
-    }
-    
     .field label {
-        font-size: 0.8rem;
+        font-size: 1.1rem;
     }
     
     .field input {
         padding-inline: 1.5rem;
         padding-block: 0.8rem;
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
     
     .view h1 {
