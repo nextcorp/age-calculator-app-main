@@ -12,9 +12,26 @@
 .button {
     display: flex;
     justify-content: center;
+    margin-block: 2rem;
 }
 
 .main {
     margin-inline: 1rem;
     margin-top: 4rem;
+    padding-inline: 2rem;
+    padding-block: 2rem;
+}
+
+.field label {
+    font-size: 0.8rem;
+}
+
+.field input {
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.view h1 {
+    font-size: 3rem;
 }
