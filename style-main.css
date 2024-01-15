@@ -35,6 +35,7 @@ body {
     font-size: 32px;
     border: 1px solid hsl(0, 0%, 86%);
     border-radius: 8px;
+    width: 100%;
 }
 
 .field input:focus {
