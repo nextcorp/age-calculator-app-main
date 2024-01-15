@@ -11,3 +11,13 @@
 body {
     font-family: "Poppins";
 }
+
+.submit-btn {
+    border: none;
+    background: hsl(259, 100%, 65%) url("assets/images/icon-arrow.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+}
