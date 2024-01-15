@@ -13,12 +13,18 @@ body {
     color: hsl(259, 100%, 65%);
 }
 
+.button {
+    position: relative;
+    border-top: 1px solid hsl(0, 0%, 86%);
+}
+
 .submit-btn {
     border: none;
     background: hsl(259, 100%, 65%) url("assets/images/icon-arrow.svg");
     background-position: center center;
     background-repeat: no-repeat;
     border-radius: 50%;
+    position: absolute;
 }
 
 .field label {
