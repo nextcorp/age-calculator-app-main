@@ -69,3 +69,7 @@ body {
 .invalid-input {
     outline: 2px solid hsl(0, 100%, 67%);
 }
+
+.hidden {
+    display: none;
+}

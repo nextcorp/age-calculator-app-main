@@ -21,6 +21,10 @@
     .submit-btn {
         top: -32px;
     }
+
+    .submit-btn:hover {
+        background-size: 40% 40%;
+    }
     
     .main {
         margin-inline: 1rem;
