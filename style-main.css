@@ -27,6 +27,13 @@ body {
     position: absolute;
 }
 
+.submit-btn:hover {
+    background: hsl(0, 0%, 8%) url("assets/images/icon-arrow.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
 .field label {
     color: hsl(0, 1%, 44%);
     font-weight: 400;

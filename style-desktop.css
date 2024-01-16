@@ -1,5 +1,5 @@
 /* TODO: make desktop layout as close to design as possible */
-@media screen and (min-width: 851px) {
+@media screen and (min-width: 751px) {
     body {
         display: flex;
         align-items: center;
@@ -8,7 +8,7 @@
     }
 
     .main {
-        max-width: 850px;
+        max-width: 750px;
     }
 
     .submit-btn {
@@ -16,11 +16,15 @@
         width: 96px;
         height: 96px;
     }
+
+    .submit-btn:hover {
+        background-size: 40% 40%;
+    }
     
     .entry {
         display: flex;
         gap: 2rem;
-        width: 60%;
+        width: 70%;
     }
     
     .button {
