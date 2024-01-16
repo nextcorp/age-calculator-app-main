@@ -1,7 +1,22 @@
 const submit_btn = document.querySelector(".submit-btn")
 
+function reset(day, month, year) {
+    const hide = (what) => {
+        const errOutput = document.querySelector(`#${what.id} ~ .err-message`)
+        errOutput.classList.add("hidden")
+    }
+
+    day.classList.remove("invalid-input")
+    month.classList.remove("invalid-input")
+    year.classList.remove("invalid-input")
+
+    hide(day)
+    hide(month)
+    hide(year)
+}
+
 function checkDate(day, month, year) {
-    
+
 }
 
 function checkEmpty(day, month, year) {
@@ -24,11 +39,10 @@ function submitButtonHandler(e) {
     const month = document.getElementById("month")
     const year = document.getElementById("year")
 
+    reset(day, month, year)
     checkEmpty(day, month, year)
 }
 
-function reset() {
 
-}
 
 submit_btn.addEventListener("click", submitButtonHandler)
