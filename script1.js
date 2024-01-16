@@ -31,25 +31,26 @@ function displayMessage(where, message) {
     where.classList.add("invalid-input")
 }
 
+function calcAge(day, month, year) {
+    //// todo
+}
+
 function checkDate(day, month, year) {
     const today = new Date(Date.now())
 
-    if (year.value > today.getFullYear()) {
-        displayMessage(year, "Must be in the past")
-        return
-    }
-
-    if ((month.value < 1) || (month.value > 12)) {
-        displayMessage(month, "Must be a valid month")
-        return
-    }
-
-    if ((day.value < 1) || (day.value > 31)) {
+    if ((day.value < 1 && day.value.length > 0) || (day.value > 31 && day.value.length > 0)) {
         displayMessage(day, "Must be a valid day")
-        return
     }
 
-    const daysInMonth = new Date(today.getFullYear(), today.getMonth()-1, 0).getDate()
+    if ((month.value < 1 && month.value.length > 0) || (month.value > 12 && month.value.length > 0)) {
+        displayMessage(month, "Must be a valid month")
+    }
+
+    if (year.value > today.getFullYear && year.value.length > 0) {
+        displayMessage(year, "Must be in the past")
+    }
+
+    const daysInMonth = new Date(year.value, month.value, 0).getDate()
 
     if (day.value > daysInMonth) {
         reset(day, month, year)
@@ -63,6 +64,8 @@ function checkDate(day, month, year) {
         displayMessage(year, "Must be in the past")
         return
     }
+
+    calcAge(day, month, year)
 }
 
 function checkEmpty(day, month, year) {
@@ -71,6 +74,8 @@ function checkEmpty(day, month, year) {
     if (day.value.length === 0) displayMessage(day, message)
     if (month.value.length === 0) displayMessage(month, message)
     if (year.value.length === 0) displayMessage(year, message)
+
+    checkDate(day, month, year)
 }
 
 function submitButtonHandler(e) {
@@ -78,7 +83,6 @@ function submitButtonHandler(e) {
 
     reset(day, month, year)
     checkEmpty(day, month, year)
-    checkDate(day, month, year)
 }
 
 clear(day, month, year)
