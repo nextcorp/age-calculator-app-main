@@ -1,4 +1,13 @@
 const submit_btn = document.querySelector(".submit-btn")
+const day = document.getElementById("day")
+const month = document.getElementById("month")
+const year = document.getElementById("year")
+
+function clear(day, month, year) {
+    day.value = null
+    month.value = null
+    year.value = null
+}
 
 function reset(day, month, year) {
     const hide = (what) => {
@@ -35,14 +44,10 @@ function checkEmpty(day, month, year) {
 function submitButtonHandler(e) {
     e.preventDefault()
 
-    const day = document.getElementById("day")
-    const month = document.getElementById("month")
-    const year = document.getElementById("year")
-
     reset(day, month, year)
     checkEmpty(day, month, year)
 }
 
-
+clear(day, month, year)
 
 submit_btn.addEventListener("click", submitButtonHandler)
