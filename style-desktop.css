@@ -20,14 +20,14 @@
     .entry {
         display: flex;
         gap: 2rem;
-
+        width: 60%;
     }
     
     .button {
         display: flex;
         justify-content: center;
-        margin-top: 4rem;
-        margin-bottom: 4rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
     }
     
     .submit-btn {
@@ -36,6 +36,7 @@
     }
     
     .main {
+        
         padding-inline: 3rem;
         padding-block: 3rem;
     }
@@ -45,8 +46,8 @@
     }
     
     .field input {
-        padding-inline: 1.5rem;
-        padding-block: 0.8rem;
+        padding-inline: 1rem;
+        padding-block: 0.5rem;
         font-size: 2rem;
     }
     
