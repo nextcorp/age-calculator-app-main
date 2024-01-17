@@ -32,7 +32,17 @@ function getFieldValue(field) {
     return field.querySelector("input").value
 }
 
-function checkEmptyFields() {
+function checkDateValidity() {
+
+}
+
+function checkEmptyFields(e) {
+    e.preventDefault()
+
+    reset(day_field)
+    reset(month_field)
+    reset(year_field)
+
     const requiredMessage = "This field is required"
     const invalidDayMessage = "Must be a valid day"
     const invalidMonthMessage = "Must be a valid month"
@@ -77,3 +87,5 @@ function checkEmptyFields() {
         // next step
     }
 }
+
+submit_btn.addEventListener("click", checkEmptyFields)
