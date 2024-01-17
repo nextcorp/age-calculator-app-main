@@ -36,20 +36,25 @@ function checkDateValidity() {
     const invalidDateMessage = "Must be a valid date"
     const futureDateMessage = "Must be in the past"
 
-    console.log("date validity check")
-
     let all_ok = true
 
     const inputDate = new Date(`${getFieldValue(year_field)}-${getFieldValue(month_field)}-${getFieldValue(day_field)}`)
-
+    /*
+    console.log(inputDate)
+    console.log(inputDate.getDate())
+    console.log(inputDate.getMonth() + 1)
+    console.log(inputDate.getFullYear())
+    */
+   
     // not working!!
     // todo: fix this
+
     if (
-        inputDate.getDate() != Number(getFieldValue(day_field)) &&
-        inputDate.getMonth() + 1 != Number(getFieldValue(month_field)) && // Months are zero-indexed, so we add 1
-        inputDate.getFullYear() != Number(getFieldValue(year_field))
+        (inputDate.getDate() !== Number(getFieldValue(day_field))) &&
+    (inputDate.getMonth() + 1 !== Number(getFieldValue(month_field))) &&
+    (inputDate.getFullYear() !== Number(getFieldValue(year_field)))
     ) {
-        console.log("date validity check iffff")
+        console.log("date not valid")
         all_ok = false
         showInvalidInput(day_field)
         showInvalidInput(month_field)
