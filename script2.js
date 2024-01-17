@@ -3,6 +3,10 @@ const day_field = document.querySelector(".entry .field:nth-child(1)")
 const month_field = document.querySelector(".entry .field:nth-child(2)")
 const year_field = document.querySelector(".entry .field:nth-child(3)")
 
+const day_view = document.querySelector(".day-view")
+const month_view = document.querySelector(".month-view")
+const year_view = document.querySelector(".year-view")
+
 function clear(field) {
     const input_element = field.querySelector("input")
     input_element.value = null
@@ -33,7 +37,13 @@ function getFieldValue(field) {
 }
 
 function calculateAge() {
-    
+    const today = new Date(Date.now())
+    const inputDate = new Date(`${getFieldValue(year_field)}-${getFieldValue(month_field)}-${getFieldValue(day_field)}`)
+    const diff = new Date(today.getTime() - inputDate.getTime())
+
+    day_view.textContent = (diff.getDate() - 1).toString()
+    month_view.textContent = (diff.getMonth()).toString()
+    year_view.textContent = (diff.getFullYear() - 1970).toString()
 }
 
 function checkDateValidity() {
@@ -47,8 +57,8 @@ function checkDateValidity() {
 
     if (
         (inputDate.getDate() !== Number(getFieldValue(day_field))) ||
-    (inputDate.getMonth() + 1 !== Number(getFieldValue(month_field))) ||
-    (inputDate.getFullYear() !== Number(getFieldValue(year_field)))
+        (inputDate.getMonth() + 1 !== Number(getFieldValue(month_field))) ||
+        (inputDate.getFullYear() !== Number(getFieldValue(year_field)))
     ) {
         all_ok = false
         showInvalidInput(day_field)
@@ -66,7 +76,7 @@ function checkDateValidity() {
     }
 
     if (all_ok) {
-        // next stage
+        calculateAge()
     }
 }
 
