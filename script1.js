@@ -68,6 +68,7 @@ function checkDate(day, month, year) {
     calcAge(day, month, year)
 }
 
+
 function checkEmpty(day, month, year) {
     const message = "This field is required"
 
