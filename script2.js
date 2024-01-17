@@ -36,9 +36,26 @@ function checkDateValidity() {
     const invalidDateMessage = "Must be a valid date"
     const futureDateMessage = "Must be in the past"
 
+    console.log("date validity check")
+
     let all_ok = true
 
-    
+    const inputDate = new Date(`${getFieldValue(year_field)}-${getFieldValue(month_field)}-${getFieldValue(day_field)}`)
+
+    // not working!!
+    // todo: fix this
+    if (
+        inputDate.getDate() != Number(getFieldValue(day_field)) &&
+        inputDate.getMonth() + 1 != Number(getFieldValue(month_field)) && // Months are zero-indexed, so we add 1
+        inputDate.getFullYear() != Number(getFieldValue(year_field))
+    ) {
+        console.log("date validity check iffff")
+        all_ok = false
+        showInvalidInput(day_field)
+        showInvalidInput(month_field)
+        showInvalidInput(year_field)
+        showMessage(day_field, invalidDateMessage)
+    }
 }
 
 function checkEmptyFields(e) {
@@ -89,8 +106,12 @@ function checkEmptyFields(e) {
     }
 
     if (all_ok) {
-        // next step
+        checkDateValidity()
     }
 }
+
+clear(day_field)
+clear(month_field)
+clear(year_field)
 
 submit_btn.addEventListener("click", checkEmptyFields)
