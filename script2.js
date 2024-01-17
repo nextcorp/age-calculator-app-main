@@ -33,7 +33,12 @@ function getFieldValue(field) {
 }
 
 function checkDateValidity() {
+    const invalidDateMessage = "Must be a valid date"
+    const futureDateMessage = "Must be in the past"
 
+    let all_ok = true
+
+    
 }
 
 function checkEmptyFields(e) {
