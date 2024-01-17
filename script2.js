@@ -32,6 +32,10 @@ function getFieldValue(field) {
     return field.querySelector("input").value
 }
 
+function calculateAge() {
+    
+}
+
 function checkDateValidity() {
     const invalidDateMessage = "Must be a valid date"
     const futureDateMessage = "Must be in the past"
@@ -39,6 +43,7 @@ function checkDateValidity() {
     let all_ok = true
 
     const inputDate = new Date(`${getFieldValue(year_field)}-${getFieldValue(month_field)}-${getFieldValue(day_field)}`)
+    const today = new Date(Date.now())
 
     if (
         (inputDate.getDate() !== Number(getFieldValue(day_field))) ||
@@ -50,6 +55,18 @@ function checkDateValidity() {
         showInvalidInput(month_field)
         showInvalidInput(year_field)
         showMessage(day_field, invalidDateMessage)
+    }
+
+    if (inputDate > today) {
+        all_ok = false
+        showInvalidInput(day_field)
+        showInvalidInput(month_field)
+        showInvalidInput(year_field)
+        showMessage(year_field, futureDateMessage)
+    }
+
+    if (all_ok) {
+        // next stage
     }
 }
 
