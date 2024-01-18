@@ -37,19 +37,11 @@ function getFieldValue(field) {
 }
 
 function calculateAge() {
-    const today = new Date(Date.now())
-    const inputDate = new Date(`${getFieldValue(year_field)}-${getFieldValue(month_field)}-${getFieldValue(day_field)}`)
-
-    const diff = (today - inputDate) / 1000
-    const years = Math.floor((diff / 86400) / 365.25)
-    const yearsInSeconds = years * (86400 * 365.25)
-    const months = Math.floor((diff - yearsInSeconds) / (86400 * 30.5))
-    const monthsInSeconds = months * (86400 * 30.5)
-    const days = Math.floor((diff - yearsInSeconds - monthsInSeconds) / 86400)
+    const diff = dateDiff(`${getFieldValue(year_field)}-${getFieldValue(month_field)}-${getFieldValue(day_field)}`)
     
-    day_view.textContent = days.toString()
-    month_view.textContent = months.toString()
-    year_view.textContent = years.toString()
+    day_view.textContent = diff.days.toString()
+    month_view.textContent = diff.months.toString()
+    year_view.textContent = diff.years.toString()
 }
 
 function checkDateValidity() {
